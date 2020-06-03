@@ -19,7 +19,7 @@ public class Project extends WindowAdapter {
       Frame f = new Frame("서울 맛집 조회 프로그램");
       Frame f2 = new Frame("?구 맛집 열람");
       Button b = new Button("확인");
-      Label text = new Label("맛집을 찾으실 구역을 지정해주세요");
+      Label text = new Label("맛집을 찾으실 구역을 지정해주세요.");
       f.setSize(500, 300);
       f.setLayout(null);
       f.addWindowListener(this);
