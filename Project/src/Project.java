@@ -16,10 +16,10 @@ public class Project extends WindowAdapter {
 	}
 
 	public Project() {
-		Frame f = new Frame("¼­¿ï ¸ÀÁý Á¶È¸ ÇÁ·Î±×·¥");
-		Frame f2 = new Frame("?±¸ ¸ÀÁý ¿­¶÷");
-		Button b = new Button("È®ÀÎ");
-		Label text = new Label("¸ÀÁýÀ» Ã£À¸½Ç ±¸¿ªÀ» ÁöÁ¤ÇØÁÖ¼¼¿ä");
+		Frame f = new Frame("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½Î±×·ï¿½");
+		Frame f2 = new Frame("?ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+		Button b = new Button("È®ï¿½ï¿½");
+		Label text = new Label("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½");
 		f.setSize(500, 300);
 		f.setLayout(null);
 		f.addWindowListener(this);
@@ -28,31 +28,31 @@ public class Project extends WindowAdapter {
 		Dimension screenSize = tk.getScreenSize();
 
 		Choice res = new Choice();
-		res.add("°­³²±¸");
-		res.add("°­µ¿±¸");
-		res.add("°­¼­±¸");
-		res.add("°­ºÏ±¸");
-		res.add("°ü¾Ç±¸");
-		res.add("±¤Áø±¸");
-		res.add("±¸·Î±¸");
-		res.add("±ÝÃµ±¸");
-		res.add("³ë¿ø±¸");
-		res.add("µ¿´ë¹®±¸");
-		res.add("µµºÀ±¸");
-		res.add("µ¿ÀÛ±¸");
-		res.add("¸¶Æ÷±¸");
-		res.add("¼­´ë¹®±¸");
-		res.add("¼ºµ¿±¸");
-		res.add("¼ººÏ±¸");
-		res.add("¼­ÃÊ±¸");
-		res.add("¼ÛÆÄ±¸");
-		res.add("¿µµîÆ÷±¸");
-		res.add("¿ë»ê±¸");
-		res.add("¾çÃµ±¸");
-		res.add("ÀºÆò±¸");
-		res.add("Á¾·Î±¸");
-		res.add("Áß±¸");
-		res.add("Áß¶û±¸");
+		res.add("ï¿½ï¿½ï¿½ï¿½ï¿½ê°•ë‚¨êµ¬");
+		res.add("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		res.add("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		res.add("ï¿½ï¿½ï¿½Ï±ï¿½");
+		res.add("ï¿½ï¿½ï¿½Ç±ï¿½");
+		res.add("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		res.add("ï¿½ï¿½ï¿½Î±ï¿½");
+		res.add("ï¿½ï¿½Ãµï¿½ï¿½");
+		res.add("ï¿½ï¿½ï¿½ï¿½ï¿½");
+		res.add("ï¿½ï¿½ï¿½ë¹®ï¿½ï¿½");
+		res.add("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		res.add("ï¿½ï¿½ï¿½Û±ï¿½");
+		res.add("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		res.add("ï¿½ï¿½ï¿½ë¹®ï¿½ï¿½");
+		res.add("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		res.add("ï¿½ï¿½ï¿½Ï±ï¿½");
+		res.add("ï¿½ï¿½ï¿½Ê±ï¿½");
+		res.add("ï¿½ï¿½ï¿½Ä±ï¿½");
+		res.add("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		res.add("ï¿½ï¿½ê±¸");
+		res.add("ï¿½ï¿½Ãµï¿½ï¿½");
+		res.add("ï¿½ï¿½ï¿½ï¿½");
+		res.add("ï¿½ï¿½ï¿½Î±ï¿½");
+		res.add("ï¿½ß±ï¿½");
+		res.add("ï¿½ß¶ï¿½ï¿½ï¿½");
 
 		res.setSize(100, 120);
 		res.setLocation(200, 100);
