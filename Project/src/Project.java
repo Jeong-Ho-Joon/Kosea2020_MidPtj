@@ -34,7 +34,7 @@ public class Project {
 		f1.add(lb2);
 		box1.setBounds(150, 250, 90, 30);
 		box2.setBounds(150, 300, 90, 30);
-		btn1.setBounds(300, 250, 100, 80);
+		btn1.setBounds(360, 250, 100, 80);
 		lb1.setBounds(10, 250, 150, 30);
 		lb2.setBounds(10, 300, 150, 30);
 		btn1.addActionListener(new ActionListener() {
