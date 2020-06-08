@@ -80,6 +80,6 @@ public class Project extends WindowAdapter {
    
    
    public static void main(String[] args) {
-      Project p = new Project();
+      new Project();
    }
 }
