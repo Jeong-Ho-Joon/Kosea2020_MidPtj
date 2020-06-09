@@ -5,9 +5,20 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 
 public class Project {
-	public static void main(String[] args) {
+	public static void main(String[] args) {		
+		String data[][] = { { "1", "일식", "스시야", "강동구 명일동", "02-3414-6654", "회덮밥, 참치대뱃살", "신선한 재료만 고집하는 집" }, 
+							{ "2", "중식", "홍선관", "송파구 잠실동", "02-5546-9895", "간짜장, 볶음짬뽕", "불맛이 살아있는 맛있는 중국집" }
+		};
+		String column[] = { "", "종류", "가게이름", "주소", "전화번호", "대표메뉴", "가게특징" };
+
+		JTable jt = new JTable(data, column);
+		jt.setCellSelectionEnabled(false);
+		JScrollPane sp = new JScrollPane(jt);
+		
 		JFrame f1 = new JFrame("서울 맛집 검색");
 		JFrame f2 = new JFrame("서울 맛집 검색");
 		JLabel lb1 = new JLabel("지역을 선택하세요♪");
@@ -52,8 +63,10 @@ public class Project {
 
 		// f2프레임
 
+		f2.add(sp);
+		sp.setBounds(0, 0, 1000, 400);
 		f2.add(btn2);
-		btn2.setBounds(470, 400, 100, 50);
+		btn2.setBounds(870, 400, 100, 50);
 		f2.setVisible(false);
 		btn2.addActionListener(new ActionListener() {
 			@Override
@@ -62,7 +75,7 @@ public class Project {
 				f2.setVisible(false);
 			}
 		});
-		f2.setSize(600, 500);
+		f2.setSize(1000, 500);
 		f2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f2.setLocationRelativeTo(null);
 	}
