@@ -1,5 +1,10 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -9,16 +14,42 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 public class Project {
-	public static void main(String[] args) {		
-		String data[][] = { { "1", "일식", "스시야", "강동구 명일동", "02-3414-6654", "회덮밥, 참치대뱃살", "신선한 재료만 고집하는 집" }, 
-							{ "2", "중식", "홍선관", "송파구 잠실동", "02-5546-9895", "간짜장, 볶음짬뽕", "불맛이 살아있는 맛있는 중국집" }
-		};
+	public static void main(String[] args) {
+		String driver = "oracle.jdbc.driver.OracleDriver";
+		String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+		String user = "kosea";
+		String password = "kosea2019a";
+		try {
+			Class.forName(driver);
+			System.out.println("jdbc driver loading success.");
+			Connection conn = DriverManager.getConnection(url, user, password);
+			System.out.println("oracle connection success.\n");
+			Statement stmt = conn.createStatement();
+			String sql = "SELECT * FROM Restaurant";
+			ResultSet rs = stmt.executeQuery(sql);
+			while (rs.next()) {
+				System.out.print(rs.getString("NO") + " ");
+	            System.out.print(rs.getString("Div") + " ");
+	            System.out.print(rs.getString("Name") + " ");
+	            System.out.print(rs.getString("Location") + " ");
+	            System.out.print(rs.getString("Tel") + " ");
+	            System.out.print(rs.getString("MainMenu") + " ");
+	            System.out.println(rs.getString("RF") + " ");
+			}
+		} catch (ClassNotFoundException e) {
+			System.out.println(e);
+		} catch (SQLException e) {
+			System.out.println(e);
+		}
+
+		String data[][] = { { "1", "일식", "스시야", "강동구 명일동", "02-3414-6654", "회덮밥, 참치대뱃살", "신선한 재료만 고집하는 집" },
+				{ "2", "중식", "홍선관", "송파구 잠실동", "02-5546-9895", "간짜장, 볶음짬뽕", "불맛이 살아있는 맛있는 중국집" } };
 		String column[] = { "", "종류", "가게이름", "주소", "전화번호", "대표메뉴", "가게특징" };
 
 		JTable jt = new JTable(data, column);
 		jt.setCellSelectionEnabled(false);
 		JScrollPane sp = new JScrollPane(jt);
-		
+
 		JFrame f1 = new JFrame("서울 맛집 검색");
 		JFrame f2 = new JFrame("서울 맛집 검색");
 		JLabel lb1 = new JLabel("지역을 선택하세요♪");
