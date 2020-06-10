@@ -2,7 +2,7 @@ import java.util.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
-public class List extends JFrame {
+public class n extends JFrame {
 
 	Vector v;
 	Vector cols;
@@ -12,7 +12,7 @@ public class List extends JFrame {
 	JPanel pbtn;
 	JButton btnInsert;
 
-	public List() {
+	public n() {
 		super("서울 맛집 검색");
 		DAO dao = new DAO();
 		v = dao.getList();
@@ -54,6 +54,6 @@ public class List extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new List();
+		new n();
 	}// main
 }

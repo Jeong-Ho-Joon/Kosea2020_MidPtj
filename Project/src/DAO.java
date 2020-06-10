@@ -6,13 +6,13 @@ public class DAO {
 	private static final String URL = "jdbc:oracle:thin:@localhost:1521:orcl";
 	private static final String USER = "kosea"; // DB ID
 	private static final String PASS = "kosea2019a"; // DB 패스워드
-	List mList;
+	Project mList;
 
 	public DAO() {
 
 	}
 
-	public DAO(List mList) {
+	public DAO(Project mList) {
 		this.mList = mList;
 		System.out.println("DAO=>" + mList);
 	}
@@ -44,7 +44,7 @@ public class DAO {
 		try {
 
 			con = getConn();
-			String sql = "select * from Restaurant order by name asc";
+			String sql = "select * from Restaurant order by NO asc";
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
 
