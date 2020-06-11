@@ -1,27 +1,22 @@
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.*;
+import java.util.Vector;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
-public class Project extends JFrame {
+public class Project {
 	Vector v;
 	Vector cols;
+	DefaultTableModel model;
 	JTable tab;
+	JScrollPane pane;
 
 	public Project() {
-		DAO dao = new DAO();
-		v = dao.getList();
-		System.out.println("v=" + v);
-		cols = getColumn();
-
-		DefaultTableModel model = new DefaultTableModel(v, cols);
-		JTable tab = new JTable(model);
-		JScrollPane pane = new JScrollPane(tab);
-		add(pane);
-
 		JFrame f1 = new JFrame("서울 맛집 검색");
 		JFrame f2 = new JFrame("서울 맛집 검색");
+		JPanel p1 = new JPanel();
 		JLabel lb1 = new JLabel("지역을 선택하세요♪");
 		JLabel lb2 = new JLabel("먹고싶은 음식종류는?!");
 		JButton btn1 = new JButton("검색!");
@@ -35,7 +30,7 @@ public class Project extends JFrame {
 		JComboBox box2 = new JComboBox(type);
 
 		f1.getContentPane().setLayout(null);
-		f2.getContentPane().setLayout(null);
+//		f2.getContentPane().setLayout(null);
 
 		// f1프레임
 
@@ -44,10 +39,10 @@ public class Project extends JFrame {
 		f1.add(btn1);
 		f1.add(lb1);
 		f1.add(lb2);
-		
+
 		box1.setBounds(150, 250, 90, 30);
 		box2.setBounds(150, 300, 90, 30);
-		
+
 		btn1.setBounds(360, 250, 100, 80);
 		btn1.addActionListener(new ActionListener() {
 			@Override
@@ -56,10 +51,10 @@ public class Project extends JFrame {
 				f2.setVisible(true);
 			}
 		});
-		
+
 		lb1.setBounds(10, 250, 150, 30);
 		lb2.setBounds(10, 300, 150, 30);
-		
+
 		f1.setSize(500, 400);
 		f1.setResizable(false);
 		f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -68,12 +63,18 @@ public class Project extends JFrame {
 
 		// f2프레임
 
-		f2.add(tab);		
-		tab.setBounds(0, 0, 1000, 400);
-		
+		DAO dao = new DAO();
+		v = dao.getList();
+		System.out.println("v=" + v);
+		cols = getColumn();
+		model = new DefaultTableModel(v, cols);
+		tab = new JTable(model);
+		pane = new JScrollPane(tab);
 		f2.add(pane);
-		f2.add(btn2);
-		
+
+		p1.add(btn2);
+		f2.add(btn2, BorderLayout.SOUTH);
+
 		btn2.setBounds(870, 400, 100, 50);
 		btn2.addActionListener(new ActionListener() {
 			@Override
@@ -82,9 +83,9 @@ public class Project extends JFrame {
 				f2.setVisible(false);
 			}
 		});
-		
-		f2.setVisible(false);
+
 		f2.setSize(1000, 500);
+		f2.setVisible(false);
 		f2.setResizable(false);
 		f2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f2.setLocationRelativeTo(null);
@@ -92,6 +93,7 @@ public class Project extends JFrame {
 	}// end 생성자
 
 	public Vector getColumn() {
+		System.out.println("getColumn() -----------------");
 		Vector col = new Vector();
 		col.add("번호");
 		col.add("종류");
@@ -103,14 +105,14 @@ public class Project extends JFrame {
 
 		return col;
 	}// getColumn
-	
-	public void jTableRefresh() {
 
-		DAO dao = new DAO();
-		DefaultTableModel model = new DefaultTableModel(dao.getList(), getColumn());
-		tab.setModel(model);
-
-	}
+//	public void jTableRefresh() {
+//		System.out.println("tabRefresh-------------");
+//		DAO dao = new DAO();
+//		DefaultTableModel model = new DefaultTableModel(dao.getList(), getColumn());
+//		tab.setModel(model);
+//
+//	}
 
 	public static void main(String[] args) {
 		new Project();
