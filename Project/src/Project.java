@@ -30,7 +30,6 @@ public class Project {
 		JComboBox box2 = new JComboBox(type);
 
 		f1.getContentPane().setLayout(null);
-//		f2.getContentPane().setLayout(null);
 
 		// f1프레임
 
@@ -67,7 +66,11 @@ public class Project {
 		v = dao.getList();
 		System.out.println("v=" + v);
 		cols = getColumn();
-		model = new DefaultTableModel(v, cols);
+		model = new DefaultTableModel(v, cols) {
+			public boolean isCellEditable(int rowIndex, int mColIndex) {
+                return false;
+            }
+		};
 		tab = new JTable(model);
 		pane = new JScrollPane(tab);
 		f2.add(pane);
@@ -75,7 +78,6 @@ public class Project {
 		p1.add(btn2);
 		f2.add(btn2, BorderLayout.SOUTH);
 
-		btn2.setBounds(870, 400, 100, 50);
 		btn2.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -90,10 +92,9 @@ public class Project {
 		f2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f2.setLocationRelativeTo(null);
 
-	}// end 생성자
+	}
 
 	public Vector getColumn() {
-		System.out.println("getColumn() -----------------");
 		Vector col = new Vector();
 		col.add("번호");
 		col.add("종류");
@@ -104,15 +105,7 @@ public class Project {
 		col.add("가게특징");
 
 		return col;
-	}// getColumn
-
-//	public void jTableRefresh() {
-//		System.out.println("tabRefresh-------------");
-//		DAO dao = new DAO();
-//		DefaultTableModel model = new DefaultTableModel(dao.getList(), getColumn());
-//		tab.setModel(model);
-//
-//	}
+	}
 
 	public static void main(String[] args) {
 		new Project();

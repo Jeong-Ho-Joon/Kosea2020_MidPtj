@@ -44,7 +44,7 @@ public class DAO {
 		try {
 
 			con = getConn();
-			String sql = "select * from Restaurant order by NO asc";
+			String sql = "select * from Restaurant order by NO";
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
 
