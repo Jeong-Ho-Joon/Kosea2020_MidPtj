@@ -4,8 +4,8 @@ import java.util.Vector;
 public class DAO {
 	private static final String DRIVER = "oracle.jdbc.driver.OracleDriver";
 	private static final String URL = "jdbc:oracle:thin:@localhost:1521:orcl";
-	private static final String USER = "kosea"; // DB ID
-	private static final String PASS = "kosea2019a"; // DB 패스워드
+	private static final String USER = "kosea";
+	private static final String PASS = "kosea2019a";
 	Project mList;
 
 	public DAO() {
@@ -17,7 +17,6 @@ public class DAO {
 		System.out.println("DAO=>" + mList);
 	}
 
-	/** DB연결 메소드 */
 	public Connection getConn() {
 		Connection con = null;
 
@@ -32,10 +31,9 @@ public class DAO {
 		return con;
 	}
 
-	/* 리스트 출력 */
 	public Vector getList(String che1, String che2) {
 
-		Vector data = new Vector(); // Jtable에 값을 쉽게 넣는 방법 1. 2차원배열 2. Vector 에 vector추가
+		Vector data = new Vector();
 
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -45,7 +43,7 @@ public class DAO {
 
 			con = getConn();
 //			String sql = "select * from Restaurant order by NO";
-			String sql = "select * from Restaurant where Location = '" + che1 + "' and Div = '" + che2
+			String sql = "select * from Restaurant where Location like '" + che1 + "%' and Div = '" + che2
 					+ "'  order by NO";
 			System.out.println(sql);
 			ps = con.prepareStatement(sql);
@@ -70,10 +68,10 @@ public class DAO {
 				row.add(RF);
 
 				data.add(row);
-			} // while
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return data;
 	}
-}// getList()
+}
