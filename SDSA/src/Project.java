@@ -56,9 +56,19 @@ public class Project {
 //		System.out.println(boxset1);
 //		String boxset2 = (String) box2.getSelectedItem();
 //		System.out.println(boxset2);
+		cols = getColumn();
+		model = new DefaultTableModel(cols, 0) {
+			public boolean isCellEditable(int rowIndex, int mColIndex) {
+				return false;
+			}		
+		};
+		tab = new JTable(model);
+		pane = new JScrollPane(tab);
+		
 		btn1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				model.setNumRows(0);
 				String boxset1 = (String) box1.getSelectedItem();
 				System.out.println(boxset1);
 				String boxset2 = (String) box2.getSelectedItem();
@@ -66,14 +76,15 @@ public class Project {
 				v = dao.getList(boxset1, boxset2);
 				System.out.println(boxset2);
 				System.out.println("v=" + v);
-				cols = getColumn();
-				model = new DefaultTableModel(v, cols) {
-					public boolean isCellEditable(int rowIndex, int mColIndex) {
-						return false;
-					}		
-				};
-				tab = new JTable(model);
-				pane = new JScrollPane(tab);
+//				cols = getColumn();
+//				model = new DefaultTableModel(v, cols) {
+//					public boolean isCellEditable(int rowIndex, int mColIndex) {
+//						return false;
+//					}		
+//				};
+//				tab = new JTable(model);
+//				pane = new JScrollPane(tab);
+				model.setDataVector(v, cols);
 				f2.add(pane);
 				f1.setVisible(false);
 				f2.setVisible(true);

@@ -38,17 +38,16 @@ public class DAO {
 		Connection con = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-
+		
 		try {
 
 			con = getConn();
 //			String sql = "select * from Restaurant order by NO";
-			String sql = "select * from Restaurant where Location like '" + che1 + "%' and Div = '" + che2
+			String sql = "select * from Restaurant where Location like '%" + che1 + "%' and Div = '" + che2
 					+ "'  order by NO";
 			System.out.println(sql);
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
-
 			while (rs.next()) {
 				int NO = rs.getInt("NO");
 				String Div = rs.getString("Div");
