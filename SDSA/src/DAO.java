@@ -37,7 +37,7 @@ public class DAO {
 		Connection con = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		
+
 		try {
 			con = getConn();
 			String sql = "select * from Restaurant where Location like '%" + che1 + "%' and Div = '" + che2
@@ -72,7 +72,7 @@ public class DAO {
 		}
 		return data;
 	}
-	
+
 	public Vector getList() {
 
 		Vector data = new Vector();
@@ -80,9 +80,9 @@ public class DAO {
 		Connection con = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		
+
 		try {
-			
+
 			con = getConn();
 			String sql2 = "select * from Restaurant order by NO";
 			System.out.println(sql2);

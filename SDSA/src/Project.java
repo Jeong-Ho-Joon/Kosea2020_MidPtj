@@ -58,11 +58,11 @@ public class Project {
 		model = new DefaultTableModel(cols, 0) {
 			public boolean isCellEditable(int rowIndex, int mColIndex) {
 				return false;
-			}		
+			}
 		};
 		tab = new JTable(model);
 		pane = new JScrollPane(tab);
-		
+
 		btn1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -80,7 +80,7 @@ public class Project {
 				f2.setVisible(true);
 			}
 		});
-		
+
 		btn2.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
