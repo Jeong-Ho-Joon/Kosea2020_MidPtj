@@ -32,7 +32,6 @@ public class DAO {
 	}
 
 	public Vector getList(String che1, String che2) {
-
 		Vector data = new Vector();
 
 		Connection con = null;
@@ -40,7 +39,6 @@ public class DAO {
 		ResultSet rs = null;
 		
 		try {
-			
 			con = getConn();
 			String sql = "select * from Restaurant where Location like '%" + che1 + "%' and Div = '" + che2
 					+ "'  order by NO";
