@@ -109,7 +109,7 @@ public class Project {
 		f1.setLocationRelativeTo(null);
 		f1.setVisible(true);
 
-		// f2프레임 //
+		// f2프레임
 
 		p1.add(btn3);
 		f2.add(btn3, BorderLayout.SOUTH);
