@@ -40,13 +40,55 @@ public class DAO {
 		ResultSet rs = null;
 		
 		try {
-
+			
 			con = getConn();
-//			String sql = "select * from Restaurant order by NO";
 			String sql = "select * from Restaurant where Location like '%" + che1 + "%' and Div = '" + che2
 					+ "'  order by NO";
 			System.out.println(sql);
+			String sql2 = "select * from Restaurant order by NO";
+			System.out.println(sql2);
 			ps = con.prepareStatement(sql);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				int NO = rs.getInt("NO");
+				String Div = rs.getString("Div");
+				String Name = rs.getString("Name");
+				String Location = rs.getString("Location");
+				String Tel = rs.getString("Tel");
+				String Mainmenu = rs.getString("Mainmenu");
+				String RF = rs.getString("RF");
+
+				Vector row = new Vector();
+				row.add(NO);
+				row.add(Div);
+				row.add(Name);
+				row.add(Location);
+				row.add(Tel);
+				row.add(Mainmenu);
+				row.add(RF);
+
+				data.add(row);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return data;
+	}
+	
+	public Vector getList() {
+
+		Vector data = new Vector();
+
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		
+		try {
+			
+			con = getConn();
+			String sql2 = "select * from Restaurant order by NO";
+			System.out.println(sql2);
+			ps = con.prepareStatement(sql2);
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				int NO = rs.getInt("NO");
