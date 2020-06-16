@@ -84,8 +84,7 @@ public class Project {
 				System.out.println(boxset2);
 				System.out.println("v=" + v);
 				model.setDataVector(v, cols);
-				f2.add(pane);
-				
+				f2.add(pane);		
 				tab.getColumnModel().getColumn(0).setPreferredWidth(0);
 				tab.getColumnModel().getColumn(1).setPreferredWidth(0);
 				tab.getColumnModel().getColumn(2).setPreferredWidth(0);
