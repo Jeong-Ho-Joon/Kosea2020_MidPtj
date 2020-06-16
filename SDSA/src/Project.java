@@ -58,7 +58,9 @@ public class Project {
 		
 		
 		btn1.setBounds(305, 10, 150, 70);
-		
+//		btn1.setBorderPainted(false);
+//		btn1.setContentAreaFilled(false);
+//		btn1.setFocusPainted(false);
 		btn2.setBounds(10, 300, 460, 20);
 
 		cols = getColumn();
