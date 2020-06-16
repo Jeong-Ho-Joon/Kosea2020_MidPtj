@@ -1,6 +1,4 @@
 import java.awt.BorderLayout;
-import java.awt.Font;
-import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -29,7 +27,8 @@ public class Project {
 		JPanel p1 = new JPanel();
 		JLabel lb1 = new JLabel("지역을 선택하세요♪");
 		JLabel lb2 = new JLabel("먹고싶은 음식종류는?!");
-		JLabel imagelb = new JLabel();
+		JLabel imagelb1 = new JLabel();
+		JLabel imagelb2 = new JLabel();
 		JButton btn1 = new JButton("검색!");
 		JButton btn2 = new JButton("전체조회");
 		JButton btn3 = new JButton("뒤로가기");
@@ -52,14 +51,16 @@ public class Project {
 		f1.add(btn2);
 		f1.add(lb1);
 		f1.add(lb2);
-		imagelb.setIcon(new ImageIcon("C:\\Users\\user\\Desktop\\사진\\8.jpg"));
-		imagelb.setBounds(0, 0, 500, 400);
-		f1.getContentPane().add(imagelb);
+		imagelb1.setIcon(new ImageIcon("C:\\Users\\user\\Desktop\\사진\\8.jpg"));
+		imagelb1.setBounds(0, 0, 500, 400);
+		f1.getContentPane().add(imagelb1);
 
 		box1.setBounds(150, 10, 120, 30);
 		box2.setBounds(150, 50, 120, 30);
-
+		
+		
 		btn1.setBounds(305, 10, 150, 70);
+		
 		btn2.setBounds(10, 300, 460, 20);
 
 		cols = getColumn();
@@ -84,6 +85,14 @@ public class Project {
 				System.out.println("v=" + v);
 				model.setDataVector(v, cols);
 				f2.add(pane);
+				tab.getColumnModel().getColumn(0).setPreferredWidth(0);
+				tab.getColumnModel().getColumn(1).setPreferredWidth(0);
+				tab.getColumnModel().getColumn(2).setPreferredWidth(0);
+				tab.getColumnModel().getColumn(3).setPreferredWidth(100);
+				tab.getColumnModel().getColumn(4).setPreferredWidth(0);
+				tab.getColumnModel().getColumn(5).setPreferredWidth(50);
+				tab.getColumnModel().getColumn(6).setPreferredWidth(200);
+
 				f1.setVisible(false);
 				f2.setVisible(true);
 			}
@@ -132,7 +141,7 @@ public class Project {
 		});
 
 		f2.setIconImage(image);
-		f2.setSize(1200, 400);
+		f2.setSize(1300, 400);
 		f2.setVisible(false);
 		f2.setResizable(false);
 		f2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
