@@ -1,10 +1,12 @@
 import java.awt.BorderLayout;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 import java.util.Vector;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -20,19 +22,21 @@ public class Project {
 	DefaultTableModel model;
 	JTable tab;
 	JScrollPane pane;
-
+	
 	public Project() {
 		JFrame f1 = new JFrame("서울 맛집 검색");
 		JFrame f2 = new JFrame("서울 맛집 검색");
 		JPanel p1 = new JPanel();
 		JLabel lb1 = new JLabel("지역을 선택하세요♪");
 		JLabel lb2 = new JLabel("먹고싶은 음식종류는?!");
+		JLabel imagelb = new JLabel();
 		JButton btn1 = new JButton("검색!");
 		JButton btn2 = new JButton("전체조회");
 		JButton btn3 = new JButton("뒤로가기");
+		JPanel panel = new JPanel();
+		ImageIcon imageIcon1 = new ImageIcon("C:\\Users\\user\\Desktop\\사진\\chinese-icon-orange.png");
 
-		String[] area = { "강남구", "강동구", "강서구", "강북구", "관악구", "광진구", "구로구", "금천구", "노원구", "동대문구", "도봉구", "동작구", "마포구",
-				"서대문구", "성동구", "성북구", "서초구", "송파구", "영등포구", "용산구", "양천구", "은평구", "종로구", "중구", "중랑구" };
+		String[] area = { "강남구", "강동구", "강서구", "강북구", "구로구", "동대문구", "마포구", "서초구", "송파구", "영등포구", "종로구" };
 		String[] type = { "고기류", "디저트", "분식", "양식", "일식", "중식", "한식" };
 
 		JComboBox<String> box1 = new JComboBox(area);
@@ -41,18 +45,22 @@ public class Project {
 		f1.getContentPane().setLayout(null);
 
 		// f1프레임
+		
 		f1.add(box1);
 		f1.add(box2);
 		f1.add(btn1);
 		f1.add(btn2);
 		f1.add(lb1);
 		f1.add(lb2);
+		imagelb.setIcon(new ImageIcon("C:\\Users\\user\\Desktop\\사진\\8.jpg"));
+		imagelb.setBounds(0, 0, 500, 400);
+		f1.getContentPane().add(imagelb);
 
 		box1.setBounds(150, 10, 120, 30);
 		box2.setBounds(150, 50, 120, 30);
 
 		btn1.setBounds(305, 10, 150, 70);
-		btn2.setBounds(10, 90, 460, 20);
+		btn2.setBounds(10, 300, 460, 20);
 
 		cols = getColumn();
 		model = new DefaultTableModel(cols, 0) {
@@ -102,6 +110,8 @@ public class Project {
 		lb1.setBounds(10, 10, 150, 30);
 		lb2.setBounds(10, 50, 150, 30);
 
+		Image image = imageIcon1.getImage();
+		f1.setIconImage(image);
 		f1.setSize(500, 400);
 		f1.setResizable(false);
 		f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -121,6 +131,7 @@ public class Project {
 			}
 		});
 
+		f2.setIconImage(image);
 		f2.setSize(1200, 400);
 		f2.setVisible(false);
 		f2.setResizable(false);
