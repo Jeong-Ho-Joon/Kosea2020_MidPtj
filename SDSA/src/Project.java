@@ -28,11 +28,9 @@ public class Project {
 		JLabel lb1 = new JLabel("지역을 선택하세요♪");
 		JLabel lb2 = new JLabel("먹고싶은 음식종류는?!");
 		JLabel imagelb1 = new JLabel();
-		JLabel imagelb2 = new JLabel();
 		JButton btn1 = new JButton("검색!");
 		JButton btn2 = new JButton("전체조회");
 		JButton btn3 = new JButton("뒤로가기");
-		JPanel panel = new JPanel();
 		ImageIcon imageIcon1 = new ImageIcon("C:\\Users\\user\\Desktop\\사진\\chinese-icon-orange.png");
 
 		String[] area = { "강남구", "강동구", "강서구", "강북구", "구로구", "동대문구", "마포구", "서초구", "송파구", "영등포구", "종로구" };
