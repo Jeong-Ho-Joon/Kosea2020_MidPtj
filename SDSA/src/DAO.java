@@ -43,8 +43,6 @@ public class DAO {
 			String sql = "select * from Restaurant where Location like '%" + che1 + "%' and Div = '" + che2
 					+ "'  order by NO";
 			System.out.println(sql);
-			String sql2 = "select * from Restaurant order by NO";
-			System.out.println(sql2);
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
 			while (rs.next()) {

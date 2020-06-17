@@ -59,10 +59,11 @@ public class Project {
 		
 		
 		btn1.setBounds(305, 10, 150, 70);
-//		btn1.setBorderPainted(false);
+		btn1.setBorderPainted(false);
 //		btn1.setContentAreaFilled(false);
 //		btn1.setFocusPainted(false);
 		btn2.setBounds(10, 300, 460, 20);
+		btn2.setBorderPainted(false);
 
 		cols = getColumn();
 		model = new DefaultTableModel(cols, 0) {
@@ -85,16 +86,16 @@ public class Project {
 				System.out.println(boxset2);
 				System.out.println("v=" + v);
 				model.setDataVector(v, cols);
-				f2.add(pane);		
 				
 				tab.getColumnModel().getColumn(0).setPreferredWidth(0);
 				tab.getColumnModel().getColumn(1).setPreferredWidth(0);
 				tab.getColumnModel().getColumn(2).setPreferredWidth(0);
-				tab.getColumnModel().getColumn(3).setPreferredWidth(100);
+				tab.getColumnModel().getColumn(3).setPreferredWidth(200);
 				tab.getColumnModel().getColumn(4).setPreferredWidth(0);
-				tab.getColumnModel().getColumn(5).setPreferredWidth(50);
-				tab.getColumnModel().getColumn(6).setPreferredWidth(200);
-
+				tab.getColumnModel().getColumn(5).setPreferredWidth(100);
+				tab.getColumnModel().getColumn(6).setPreferredWidth(300);
+				
+				f2.add(pane);
 				f1.setVisible(false);
 				f2.setVisible(true);
 			}
@@ -112,6 +113,15 @@ public class Project {
 				System.out.println(boxset2);
 				System.out.println("v=" + v);
 				model.setDataVector(v, cols);
+				
+				tab.getColumnModel().getColumn(0).setPreferredWidth(0);
+				tab.getColumnModel().getColumn(1).setPreferredWidth(0);
+				tab.getColumnModel().getColumn(2).setPreferredWidth(0);
+				tab.getColumnModel().getColumn(3).setPreferredWidth(200);
+				tab.getColumnModel().getColumn(4).setPreferredWidth(0);
+				tab.getColumnModel().getColumn(5).setPreferredWidth(100);
+				tab.getColumnModel().getColumn(6).setPreferredWidth(300);
+				
 				f2.add(pane);
 				f1.setVisible(false);
 				f2.setVisible(true);
@@ -132,6 +142,7 @@ public class Project {
 		// f2프레임
 
 		p1.add(btn3);
+		btn3.setBorderPainted(false);
 		f2.add(btn3, BorderLayout.SOUTH);
 
 		btn3.addActionListener(new ActionListener() {
