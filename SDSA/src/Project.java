@@ -1,5 +1,4 @@
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
@@ -98,7 +97,7 @@ public class Project {
 
 				tab.getColumnModel().getColumn(0).setPreferredWidth(0);
 				tab.getColumnModel().getColumn(1).setPreferredWidth(0);
-				tab.getColumnModel().getColumn(2).setPreferredWidth(10);
+				tab.getColumnModel().getColumn(2).setPreferredWidth(50);
 				tab.getColumnModel().getColumn(3).setPreferredWidth(250);
 				tab.getColumnModel().getColumn(4).setPreferredWidth(0);
 				tab.getColumnModel().getColumn(5).setPreferredWidth(100);
@@ -125,7 +124,7 @@ public class Project {
 
 				tab.getColumnModel().getColumn(0).setPreferredWidth(0);
 				tab.getColumnModel().getColumn(1).setPreferredWidth(0);
-				tab.getColumnModel().getColumn(2).setPreferredWidth(10);
+				tab.getColumnModel().getColumn(2).setPreferredWidth(50);
 				tab.getColumnModel().getColumn(3).setPreferredWidth(250);
 				tab.getColumnModel().getColumn(4).setPreferredWidth(0);
 				tab.getColumnModel().getColumn(5).setPreferredWidth(100);
