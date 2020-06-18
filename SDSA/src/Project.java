@@ -45,8 +45,8 @@ public class Project {
 
 		JComboBox<String> box1 = new JComboBox<String>(area);
 		JComboBox<String> box2 = new JComboBox<String>(type);
-		box1.setFont(new Font("배찌체", Font.PLAIN, 15));
-		box2.setFont(new Font("배찌체", Font.PLAIN, 15));
+		box1.setFont(new Font("배찌체", Font.BOLD, 15));
+		box2.setFont(new Font("배찌체", Font.BOLD, 15));
 
 		f1.getContentPane().setLayout(null);
 
