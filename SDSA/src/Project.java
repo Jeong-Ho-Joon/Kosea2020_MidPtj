@@ -158,7 +158,8 @@ public class Project {
 				f2.setVisible(false);
 			}
 		});
-
+		
+		f2.setIconImage(image);
 		f2.setSize(1300, 400);
 		f2.setVisible(false);
 		f2.setResizable(false);
