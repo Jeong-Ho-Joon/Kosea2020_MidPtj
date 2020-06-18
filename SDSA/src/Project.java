@@ -1,4 +1,6 @@
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,35 +17,42 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 public class Project {
-	
+
 	Vector v;
 	Vector cols;
 	DefaultTableModel model;
 	JTable tab;
 	JScrollPane pane;
-	
+
 	public Project() {
 		JFrame f1 = new JFrame("서울 맛집 검색");
 		JFrame f2 = new JFrame("서울 맛집 검색");
 		JPanel p1 = new JPanel();
 		JLabel lb1 = new JLabel("지역을 선택하세요♪");
+		lb1.setFont(new Font("배찌체", Font.PLAIN, 18));
 		JLabel lb2 = new JLabel("먹고싶은 음식종류는?!");
+		lb2.setFont(new Font("배찌체", Font.PLAIN, 18));
 		JLabel imagelb1 = new JLabel();
 		JButton btn1 = new JButton("검색!");
+		btn1.setFont(new Font("배찌체", Font.PLAIN, 25));
 		JButton btn2 = new JButton("전체조회");
+		btn2.setFont(new Font("배찌체", Font.PLAIN, 20));
 		JButton btn3 = new JButton("뒤로가기");
+		btn3.setFont(new Font("배찌체", Font.PLAIN, 20));
 		ImageIcon imageIcon1 = new ImageIcon("C:\\Users\\user\\Desktop\\사진\\chinese-icon-orange.png");
 
 		String[] area = { "강남구", "강동구", "강서구", "강북구", "구로구", "동대문구", "마포구", "서초구", "송파구", "영등포구", "종로구" };
 		String[] type = { "고기류", "디저트", "분식", "양식", "일식", "중식", "한식" };
 
-		JComboBox<String> box1 = new JComboBox(area);
-		JComboBox<String> box2 = new JComboBox(type);
+		JComboBox<String> box1 = new JComboBox<String>(area);
+		JComboBox<String> box2 = new JComboBox<String>(type);
+		box1.setFont(new Font("배찌체", Font.PLAIN, 15));
+		box2.setFont(new Font("배찌체", Font.PLAIN, 15));
 
 		f1.getContentPane().setLayout(null);
 
 		// f1프레임
-		
+
 		f1.add(box1);
 		f1.add(box2);
 		f1.add(btn1);
@@ -56,8 +65,7 @@ public class Project {
 
 		box1.setBounds(150, 10, 120, 30);
 		box2.setBounds(150, 50, 120, 30);
-		
-		
+
 		btn1.setBounds(305, 10, 150, 70);
 		btn1.setBorderPainted(false);
 //		btn1.setContentAreaFilled(false);
@@ -73,6 +81,7 @@ public class Project {
 		};
 		tab = new JTable(model);
 		pane = new JScrollPane(tab);
+		tab.setFont(new Font("배찌체", Font.PLAIN, 15));
 
 		btn1.addActionListener(new ActionListener() {
 			@Override
@@ -86,7 +95,7 @@ public class Project {
 				System.out.println(boxset2);
 				System.out.println("v=" + v);
 				model.setDataVector(v, cols);
-				
+
 				tab.getColumnModel().getColumn(0).setPreferredWidth(0);
 				tab.getColumnModel().getColumn(1).setPreferredWidth(0);
 				tab.getColumnModel().getColumn(2).setPreferredWidth(0);
@@ -94,7 +103,7 @@ public class Project {
 				tab.getColumnModel().getColumn(4).setPreferredWidth(0);
 				tab.getColumnModel().getColumn(5).setPreferredWidth(100);
 				tab.getColumnModel().getColumn(6).setPreferredWidth(300);
-				
+
 				f2.add(pane);
 				f1.setVisible(false);
 				f2.setVisible(true);
@@ -113,7 +122,7 @@ public class Project {
 				System.out.println(boxset2);
 				System.out.println("v=" + v);
 				model.setDataVector(v, cols);
-				
+
 				tab.getColumnModel().getColumn(0).setPreferredWidth(0);
 				tab.getColumnModel().getColumn(1).setPreferredWidth(0);
 				tab.getColumnModel().getColumn(2).setPreferredWidth(0);
@@ -121,7 +130,7 @@ public class Project {
 				tab.getColumnModel().getColumn(4).setPreferredWidth(0);
 				tab.getColumnModel().getColumn(5).setPreferredWidth(100);
 				tab.getColumnModel().getColumn(6).setPreferredWidth(300);
-				
+
 				f2.add(pane);
 				f1.setVisible(false);
 				f2.setVisible(true);
@@ -153,7 +162,6 @@ public class Project {
 			}
 		});
 
-		f2.setIconImage(image);
 		f2.setSize(1300, 400);
 		f2.setVisible(false);
 		f2.setResizable(false);
