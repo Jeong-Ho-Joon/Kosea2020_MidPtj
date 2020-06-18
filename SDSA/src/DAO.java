@@ -82,7 +82,7 @@ public class DAO {
 		try {
 
 			con = getConn();
-			String sql2 = "select * from Restaurant order by NO";
+			String sql2 = "select * from Restaurant order by Div";
 			System.out.println(sql2);
 			ps = con.prepareStatement(sql2);
 			rs = ps.executeQuery();
