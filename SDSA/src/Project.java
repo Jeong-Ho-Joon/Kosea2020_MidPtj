@@ -33,11 +33,11 @@ public class Project {
 		lb2.setFont(new Font("배찌체", Font.PLAIN, 18));
 		JLabel imagelb1 = new JLabel();
 		JButton btn1 = new JButton("검색 !");
-		btn1.setFont(new Font("배찌체", Font.PLAIN, 25));
+		btn1.setFont(new Font("배찌체", Font.BOLD, 25));
 		JButton btn2 = new JButton("전체조회");
-		btn2.setFont(new Font("배찌체", Font.PLAIN, 20));
+		btn2.setFont(new Font("배찌체", Font.BOLD, 20));
 		JButton btn3 = new JButton("뒤로가기");
-		btn3.setFont(new Font("배찌체", Font.PLAIN, 20));
+		btn3.setFont(new Font("배찌체", Font.BOLD, 20));
 		ImageIcon imageIcon1 = new ImageIcon("C:\\Users\\user\\Desktop\\사진\\chinese-icon-orange.png");
 
 		String[] area = { "강남구", "강동구", "강서구", "강북구", "구로구", "동대문구", "마포구", "서초구", "송파구", "영등포구", "종로구" };
