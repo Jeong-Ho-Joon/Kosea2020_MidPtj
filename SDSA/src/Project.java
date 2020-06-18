@@ -27,12 +27,12 @@ public class Project {
 		JFrame f1 = new JFrame("서울 맛집 검색");
 		JFrame f2 = new JFrame("서울 맛집 검색");
 		JPanel p1 = new JPanel();
-		JLabel lb1 = new JLabel("지역을 선택하세요♪");
+		JLabel lb1 = new JLabel("지역을 지정해주세요 ♪");
 		lb1.setFont(new Font("배찌체", Font.PLAIN, 18));
 		JLabel lb2 = new JLabel("먹고싶은 음식종류는?!");
 		lb2.setFont(new Font("배찌체", Font.PLAIN, 18));
 		JLabel imagelb1 = new JLabel();
-		JButton btn1 = new JButton("검색!");
+		JButton btn1 = new JButton("검색 !");
 		btn1.setFont(new Font("배찌체", Font.PLAIN, 25));
 		JButton btn2 = new JButton("전체조회");
 		btn2.setFont(new Font("배찌체", Font.PLAIN, 20));
