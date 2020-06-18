@@ -98,8 +98,8 @@ public class Project {
 
 				tab.getColumnModel().getColumn(0).setPreferredWidth(0);
 				tab.getColumnModel().getColumn(1).setPreferredWidth(0);
-				tab.getColumnModel().getColumn(2).setPreferredWidth(0);
-				tab.getColumnModel().getColumn(3).setPreferredWidth(200);
+				tab.getColumnModel().getColumn(2).setPreferredWidth(10);
+				tab.getColumnModel().getColumn(3).setPreferredWidth(250);
 				tab.getColumnModel().getColumn(4).setPreferredWidth(0);
 				tab.getColumnModel().getColumn(5).setPreferredWidth(100);
 				tab.getColumnModel().getColumn(6).setPreferredWidth(300);
@@ -125,8 +125,8 @@ public class Project {
 
 				tab.getColumnModel().getColumn(0).setPreferredWidth(0);
 				tab.getColumnModel().getColumn(1).setPreferredWidth(0);
-				tab.getColumnModel().getColumn(2).setPreferredWidth(0);
-				tab.getColumnModel().getColumn(3).setPreferredWidth(200);
+				tab.getColumnModel().getColumn(2).setPreferredWidth(10);
+				tab.getColumnModel().getColumn(3).setPreferredWidth(250);
 				tab.getColumnModel().getColumn(4).setPreferredWidth(0);
 				tab.getColumnModel().getColumn(5).setPreferredWidth(100);
 				tab.getColumnModel().getColumn(6).setPreferredWidth(300);
