@@ -29,7 +29,7 @@ public class Project {
 		JPanel p1 = new JPanel();
 		JLabel lb1 = new JLabel("지역을 지정해주세요 ♪");
 		lb1.setFont(new Font("배찌체", Font.PLAIN, 18));
-		JLabel lb2 = new JLabel("먹고싶은 음식종류는?!");
+		JLabel lb2 = new JLabel("먹고싶은 음식종류는 ?!");
 		lb2.setFont(new Font("배찌체", Font.PLAIN, 18));
 		JLabel imagelb1 = new JLabel();
 		JButton btn1 = new JButton("검색 !");
@@ -47,8 +47,6 @@ public class Project {
 		JComboBox<String> box2 = new JComboBox<String>(type);
 		box1.setFont(new Font("배찌체", Font.BOLD, 15));
 		box2.setFont(new Font("배찌체", Font.BOLD, 15));
-
-		f1.getContentPane().setLayout(null);
 
 		// f1프레임
 
