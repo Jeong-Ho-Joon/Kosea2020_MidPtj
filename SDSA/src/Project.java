@@ -51,7 +51,7 @@ public class Project {
 
 		f1.getContentPane().setLayout(null);
 
-		// f1프레임 //
+		// f1프레임 
 
 		f1.add(box1);
 		f1.add(box2);
