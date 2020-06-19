@@ -51,9 +51,9 @@ public class Project {
 		f1.add(btn4);
 		f1.add(lb1);
 		f1.add(lb2);
+		f1.add(imagelb1);
 		imagelb1.setIcon(new ImageIcon("C:\\Users\\user\\Desktop\\사진\\8.jpg"));
 		imagelb1.setBounds(0, 0, 500, 400);
-		f1.getContentPane().add(imagelb1);
 
 		box1.setBounds(150, 10, 120, 30);
 		box2.setBounds(150, 50, 120, 30);
@@ -90,7 +90,7 @@ public class Project {
 				System.out.println(boxset1);
 				String boxset2 = (String) box2.getSelectedItem();
 				DAO dao = new DAO();
-				v = dao.getList(boxset1, boxset2);
+				v = dao.getList1(boxset1, boxset2);
 				System.out.println(boxset2);
 				System.out.println("v=" + v);
 				model.setDataVector(v, cols);
@@ -117,7 +117,7 @@ public class Project {
 				System.out.println(boxset1);
 				String boxset2 = (String) box2.getSelectedItem();
 				DAO dao = new DAO();
-				v = dao.getList1();
+				v = dao.getList2();
 				System.out.println(boxset2);
 				System.out.println("v=" + v);
 				model.setDataVector(v, cols);
@@ -144,7 +144,7 @@ public class Project {
 				System.out.println(boxset1);
 				String boxset2 = (String) box2.getSelectedItem();
 				DAO dao = new DAO();
-				v = dao.getList2();
+				v = dao.getList3();
 				System.out.println(boxset2);
 				System.out.println("v=" + v);
 				model.setDataVector(v, cols);

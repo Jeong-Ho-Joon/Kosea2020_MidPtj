@@ -33,7 +33,7 @@ public class DAO {
 
 	//일반검색 쿼리문
 	
-	public Vector getList(String che1, String che2) {
+	public Vector getList1(String che1, String che2) {
 		Vector data = new Vector();
 
 		Connection con = null;
@@ -75,7 +75,7 @@ public class DAO {
 	
 	//전체조회 쿼리문
 	
-	public Vector getList1() {
+	public Vector getList2() {
 
 		Vector data = new Vector();
 
@@ -118,7 +118,7 @@ public class DAO {
 	
 	//랜덤조회 쿼리문
 	
-	public Vector getList2() {
+	public Vector getList3() {
 
 		Vector data = new Vector();
 
