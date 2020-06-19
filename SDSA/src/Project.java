@@ -87,11 +87,11 @@ public class Project {
 			public void actionPerformed(ActionEvent e) {
 				model.setNumRows(0);
 				String boxset1 = (String) box1.getSelectedItem();
-				System.out.println(boxset1);
 				String boxset2 = (String) box2.getSelectedItem();
+				System.out.println(boxset1);
+				System.out.println(boxset2);
 				DAO dao = new DAO();
 				v = dao.getList1(boxset1, boxset2);
-				System.out.println(boxset2);
 				System.out.println("v=" + v);
 				model.setDataVector(v, cols);
 
@@ -114,11 +114,10 @@ public class Project {
 			public void actionPerformed(ActionEvent e) {
 				model.setNumRows(0);
 				String boxset1 = (String) box1.getSelectedItem();
-				System.out.println(boxset1);
 				String boxset2 = (String) box2.getSelectedItem();
+				System.out.println("ALL");
 				DAO dao = new DAO();
 				v = dao.getList2();
-				System.out.println(boxset2);
 				System.out.println("v=" + v);
 				model.setDataVector(v, cols);
 
@@ -141,11 +140,10 @@ public class Project {
 			public void actionPerformed(ActionEvent e) {
 				model.setNumRows(0);
 				String boxset1 = (String) box1.getSelectedItem();
-				System.out.println(boxset1);
 				String boxset2 = (String) box2.getSelectedItem();
+				System.out.println("RANDOM");
 				DAO dao = new DAO();
 				v = dao.getList3();
-				System.out.println(boxset2);
 				System.out.println("v=" + v);
 				model.setDataVector(v, cols);
 
