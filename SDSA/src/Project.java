@@ -63,8 +63,6 @@ public class Project {
 		btn1.setBounds(305, 10, 150, 70);
 		btn1.setBorderPainted(false);
 		btn1.setFont(new Font("배찌체", Font.BOLD, 25));
-//		btn1.setContentAreaFilled(false);
-//		btn1.setFocusPainted(false);
 		btn2.setBounds(270, 325, 200, 25);
 		btn2.setBorderPainted(false);
 		btn2.setFont(new Font("배찌체", Font.BOLD, 20));

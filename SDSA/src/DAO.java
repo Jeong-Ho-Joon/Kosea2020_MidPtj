@@ -6,16 +6,6 @@ public class DAO {
 	private static final String URL = "jdbc:oracle:thin:@localhost:1521:orcl";
 	private static final String USER = "kosea";
 	private static final String PASS = "kosea2019a";
-	Project mList;
-
-	public DAO() {
-
-	}
-
-	public DAO(Project mList) {
-		this.mList = mList;
-		System.out.println("DAO=>" + mList);
-	}
 
 	public Connection getConn() {
 		Connection con = null;
