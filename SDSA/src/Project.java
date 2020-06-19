@@ -28,18 +28,12 @@ public class Project {
 		JFrame f2 = new JFrame("서울 맛집 검색");
 		JPanel p1 = new JPanel();
 		JLabel lb1 = new JLabel("지역을 지정해주세요 ♪");
-		lb1.setFont(new Font("배찌체", Font.PLAIN, 18));
 		JLabel lb2 = new JLabel("먹고싶은 음식종류는 ?!");
-		lb2.setFont(new Font("배찌체", Font.PLAIN, 18));
 		JLabel imagelb1 = new JLabel();
 		JButton btn1 = new JButton("검색 !");
-		btn1.setFont(new Font("배찌체", Font.BOLD, 25));
 		JButton btn2 = new JButton("전체조회");
-		btn2.setFont(new Font("배찌체", Font.BOLD, 20));
 		JButton btn3 = new JButton("뒤로가기");
-		btn3.setFont(new Font("배찌체", Font.BOLD, 20));
 		JButton btn4 = new JButton("랜덤조회");
-		btn4.setFont(new Font("배찌체", Font.BOLD, 20));
 		ImageIcon imageIcon1 = new ImageIcon("C:\\Users\\user\\Desktop\\사진\\chinese-icon-orange.png");
 
 		String[] area = { "강남구", "강동구", "강서구", "강북구", "구로구", "동대문구", "마포구", "서초구", "송파구", "영등포구", "종로구" };
@@ -47,8 +41,6 @@ public class Project {
 
 		JComboBox<String> box1 = new JComboBox<String>(area);
 		JComboBox<String> box2 = new JComboBox<String>(type);
-		box1.setFont(new Font("배찌체", Font.BOLD, 15));
-		box2.setFont(new Font("배찌체", Font.BOLD, 15));
 
 		// f1프레임
 
@@ -65,15 +57,20 @@ public class Project {
 
 		box1.setBounds(150, 10, 120, 30);
 		box2.setBounds(150, 50, 120, 30);
+		box1.setFont(new Font("배찌체", Font.BOLD, 15));
+		box2.setFont(new Font("배찌체", Font.BOLD, 15));
 
 		btn1.setBounds(305, 10, 150, 70);
 		btn1.setBorderPainted(false);
+		btn1.setFont(new Font("배찌체", Font.BOLD, 25));
 //		btn1.setContentAreaFilled(false);
 //		btn1.setFocusPainted(false);
 		btn2.setBounds(270, 325, 200, 25);
 		btn2.setBorderPainted(false);
+		btn2.setFont(new Font("배찌체", Font.BOLD, 20));
 		btn4.setBounds(10, 325, 200, 25);
 		btn4.setBorderPainted(false);
+		btn4.setFont(new Font("배찌체", Font.BOLD, 20));
 
 		cols = getColumn();
 		model = new DefaultTableModel(cols, 0) {
@@ -168,6 +165,8 @@ public class Project {
 
 		lb1.setBounds(10, 10, 150, 30);
 		lb2.setBounds(10, 50, 150, 30);
+		lb1.setFont(new Font("배찌체", Font.PLAIN, 18));
+		lb2.setFont(new Font("배찌체", Font.PLAIN, 18));
 
 		Image image = imageIcon1.getImage();
 		f1.setIconImage(image);
@@ -180,6 +179,7 @@ public class Project {
 		// f2프레임
 
 		p1.add(btn3);
+		btn3.setFont(new Font("배찌체", Font.BOLD, 20));
 		btn3.setBorderPainted(false);
 		f2.add(btn3, BorderLayout.SOUTH);
 
