@@ -111,8 +111,6 @@ public class Project {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				model.setNumRows(0);
-				String boxset1 = (String) box1.getSelectedItem();
-				String boxset2 = (String) box2.getSelectedItem();
 				System.out.println("ALL");
 				DAO dao = new DAO();
 				v = dao.getList2();
@@ -137,8 +135,6 @@ public class Project {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				model.setNumRows(0);
-				String boxset1 = (String) box1.getSelectedItem();
-				String boxset2 = (String) box2.getSelectedItem();
 				System.out.println("RANDOM");
 				DAO dao = new DAO();
 				v = dao.getList3();
