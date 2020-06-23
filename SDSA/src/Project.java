@@ -79,7 +79,9 @@ public class Project {
 		tab = new JTable(model);
 		pane = new JScrollPane(tab);
 		tab.setFont(new Font("배찌체", Font.PLAIN, 15));
-
+		
+		//일반조회 버튼
+		
 		btn1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -107,6 +109,8 @@ public class Project {
 			}
 		});
 
+		//전체조회 버튼
+		
 		btn2.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -130,6 +134,8 @@ public class Project {
 				f2.setVisible(true);
 			}
 		});
+		
+		//랜덤조회 버튼
 		
 		btn4.addActionListener(new ActionListener() {
 			@Override
