@@ -7,8 +7,11 @@ public class DAO {
 	private static final String USER = "kosea";
 	private static final String PASS = "kosea2019a";
 
+	Connection con = null;
+	PreparedStatement ps = null;
+	ResultSet rs = null;
+
 	public Connection getConn() {
-		Connection con = null;
 
 		try {
 			Class.forName(DRIVER);
@@ -21,14 +24,10 @@ public class DAO {
 		return con;
 	}
 
-	//일반검색 쿼리문
-	
+	// 일반검색 쿼리문
+
 	public Vector getList1(String che1, String che2) {
 		Vector data = new Vector();
-
-		Connection con = null;
-		PreparedStatement ps = null;
-		ResultSet rs = null;
 
 		try {
 			con = getConn();
@@ -62,16 +61,12 @@ public class DAO {
 		}
 		return data;
 	}
-	
-	//전체조회 쿼리문
-	
+
+	// 전체조회 쿼리문
+
 	public Vector getList2() {
 
 		Vector data = new Vector();
-
-		Connection con = null;
-		PreparedStatement ps = null;
-		ResultSet rs = null;
 
 		try {
 
@@ -105,16 +100,12 @@ public class DAO {
 		}
 		return data;
 	}
-	
-	//랜덤조회 쿼리문
-	
+
+	// 랜덤조회 쿼리문
+
 	public Vector getList3() {
 
 		Vector data = new Vector();
-
-		Connection con = null;
-		PreparedStatement ps = null;
-		ResultSet rs = null;
 
 		try {
 
